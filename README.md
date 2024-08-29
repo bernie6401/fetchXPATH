@@ -15,7 +15,6 @@
 $ python fetchXPATH.py
 ```
 1. 以登入首頁為例
-    <img src="./img/124232_0.jpg" width="200px" />
     ```bash
     $ python fetchXPATH.py
     Clickable View XPATH:  //android.widget.Button[@index='0' and @text='Sign up free' and @package='com.spotify.music' and @clickable='true']
@@ -23,8 +22,8 @@ $ python fetchXPATH.py
     Clickable View XPATH:  //android.widget.Button[@index='2' and @text='Continue with Facebook' and @package='com.spotify.music' and @clickable='true']      
     Clickable View XPATH:  //android.widget.Button[@index='3' and @text='Log in' and @package='com.spotify.music' and @clickable='true']
     ```
+    <img src="./img/124232_0.jpg" width="200px" />
 2. 以填入帳密的activity為例
-	<img src="./img/124231_0.jpg" width="200px"/>
     ```bash
     $ python fetchXPATH.py
     Clickable View XPATH:  //android.widget.EditText[@index='1' and @resource-id='com.spotify.music:id/username_text' and @package='com.spotify.music' and @clickable='true']
@@ -36,3 +35,4 @@ $ python fetchXPATH.py
     Editable View XPATH:  //android.widget.EditText[@index='1' and @resource-id='com.spotify.music:id/username_text' and @package='com.spotify.music' and @clickable='true']
     Editable View XPATH:  //android.widget.EditText[@index='0' and @resource-id='com.spotify.music:id/password_text' and @package='com.spotify.music' and @clickable='true']
     ```
+    <img src="./img/124231_0.jpg" width="200px"/>

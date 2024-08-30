@@ -36,3 +36,21 @@ $ python fetchXPATH.py
     Editable View XPATH:  //android.widget.EditText[@index='0' and @resource-id='com.spotify.music:id/password_text' and @package='com.spotify.music' and @clickable='true']
     ```
     <img src="./img/124231_0.jpg" width="200px"/>
+
+## Note
+有個小地方需要注意，當目前的activity view會因為使用者的操作而有變化的時候，XPATH會有變化，以Mattermost的登入畫面為例，Button會因為使用者填入帳密才會顯示，這樣的話同一個view的XPATH會不一樣
+<img src="./img/圖片1.png" width="400px" />
+```bash
+# 輸入帳密之前
+$ python fetchXPATH.py
+Clickable View XPATH:  //android.widget.EditText[@index='0' and @resource-id='server_form.server_url.input' and @package='com.mattermost.rn' and @clickable='true']
+Clickable View XPATH:  //android.widget.EditText[@index='0' and @resource-id='server_form.server_display_name.input' and @package='com.mattermost.rn' and @clickable='true']
+Clickable View XPATH:  //android.widget.Button[@index='0' and @resource-id='server_form.connect.button.disabled' and @package='com.mattermost.rn' and @content-desc='Connect' and @clickable='true']
+
+# 輸入帳密後
+$ python fetchXPATH.py
+Clickable View XPATH:  //android.widget.EditText[@index='0' and @text='aaa' and @resource-id='server_form.server_url.input' and @package='com.mattermost.rn' and @clickable='true']
+Clickable View XPATH:  //android.widget.EditText[@index='0' and @text='aaa' and @resource-id='server_form.server_display_name.input' and @package='com.mattermost.rn' and @clickable='true']
+Clickable View XPATH:  //android.widget.Button[@index='0' and @resource-id='server_form.connect.button' and @package='com.mattermost.rn' and @content-desc='Connect' and @clickable='true']
+```
+可以看到最後的button的resource-id從`server_form.connect.button.disabled`變成`server_form.connect.button`
